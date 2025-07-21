@@ -1,4 +1,5 @@
 
+/// <reference types="react" />
 import React, { useState, useEffect, useMemo } from 'react';
 
 import { studyPlan } from './data/studyPlan';

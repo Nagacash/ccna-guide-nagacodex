@@ -33,6 +33,7 @@ const AiTutor = () => {
     const [error, setError] = useState<string | null>(null);
     const chatRef = useRef<Chat | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const chatContainerRef = useRef<HTMLDivElement>(null); // Ref for the scrollable container
 
     useEffect(() => {
         if (!process.env.API_KEY) {
@@ -58,7 +59,9 @@ const AiTutor = () => {
     }, []);
 
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        if (messagesEndRef.current && chatContainerRef.current) {
+            messagesEndRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }, [messages, loading]);
 
     const handleSendMessage = async (e: React.FormEvent) => {
