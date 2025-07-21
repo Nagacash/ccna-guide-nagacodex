@@ -69,7 +69,7 @@ const App: React.FC = () => {
                 <img src="/images/logo.png" alt="Naga Codex Logo" className="w-11 h-11" />
                 <h1 className="text-4xl sm:text-5xl font-bold text-dark-foreground tracking-tight">CCNA 7-Day Intensive Prep</h1>
             </div>
-            <p className="text-lg text-dark-muted-foreground">Your personalized study hub for the CCNA 200-301 Exam</p>
+            <p className="text-lg text-dark-muted-foreground">Naga Codex - Your personalized study hub for the CCNA 200-301 Exam</p>
         </header>
 
         <main className="space-y-12">
